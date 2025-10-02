@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart — Time Is Illusion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff8f0;
+      padding: 40px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #d88c9a;
+      margin-bottom: 30px;
+    }
+    #login {
+      text-align: center;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #d88c9a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #content {
+      display: none;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Heart</h1>
+
+  <div id="login">
+    <p>This page is softly locked. Please enter the password to continue:</p>
+    <input type="password" id="password" placeholder="Enter password" />
+    <br>
+    <button onclick="checkPassword()">Unlock</button>
+  </div>
+
+  <div id="content">
+  <h2 style="color: #d88c9a;">Those days</h2>
+  <p style="color: #6495ED;">Here you can write your past and present reflections, stories, and moments you never want to forget...</p>
+</div>
+</div>
+
+<script>
+  function checkPassword() {
+    const input = document.getElementById("password").value;
+    const correct = "fishy"; 
+    if (input === correct) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    } else {
+      alert("Incorrect password.");
+    }
+  }
+</script>
+
+</body>
+</html>
