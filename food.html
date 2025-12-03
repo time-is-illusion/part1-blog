@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Food We Eat</title>
+
+  <style>
+    :root {
+      --text: #111;
+      --muted: #555;
+      --bg: #fff;
+      --accent: #2a9d8f; /* teal accent */
+      --overlay: rgba(0,0,0,0.45);
+      --card: rgba(255,255,255,0.9);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 72vh;
+      display: grid;
+      place-items: center;
+      padding: 4rem 1.25rem;
+      background-image:
+        linear-gradient(var(--overlay), var(--overlay)),
+        url("YOUR_FAST_FOOD_IMAGE_URL.jpg"); /* Replace with your fast food background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero .content {
+      max-width: 1000px;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+
+    h1 {
+      margin: 0.25rem 0 0.75rem;
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .lead {
+      font-size: clamp(1rem, 2.1vw, 1.15rem);
+      color: var(--muted);
+      margin: 0 0 1rem;
+    }
+
+    /* Grid layout for 3 parallel cards */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* three equal columns */
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      text-decoration: none; /* remove underline */
+      color: inherit; /* keep text colour */
+      display: block;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+    }
+
+    .card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 8px;
+      padding: 0.25rem 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      padding: 2rem 1.25rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive: stack cards on small screens */
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="content">
+      <h1>The Food We Eat</h1>
+      <p class="lead">
+        Packaged foods, media influence, and brain chemistry shape our eating habits. 
+        This chapter explores how artificial consumption is marketed, how our minds respond, 
+        and how mindful choices can restore balance.
+      </p>
+
+      <div class="grid">
+        <!-- Each card is now a link -->
+        <a href="packagedidentity.html" class="card">
+          <h2>Artificial Identity</h2>
+          <p>Packaged products create a false sense of identity, shaping how we see ourselves through consumption.</p>
+          <span class="tag">Packaged Identity</span>
+        </a>
+
+        <a href="mediainfluence.html" class="card">
+          <h2>Media & Brain Manipulation</h2>
+          <p>Advertising and global trends push artificial foods, while the brain’s reward system keeps us hooked.</p>
+          <span class="tag">Media Influence</span>
+        </a>
+
+        <a href="healthychoices.html" class="card">
+          <h2>Mindful Eating</h2>
+          <p>Choosing whole, healthy foods and resisting manipulation helps us live consciously and sustainably.</p>
+          <span class="tag">Healthy Choices</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © Awakening — The Food We Eat
+  </footer>
+
+</body>
+</html>
+
 
