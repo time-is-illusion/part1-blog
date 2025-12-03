@@ -39,6 +39,7 @@
 
     .hero .content {
       max-width: 1000px;
+      width: 100%; /* stretch across */
       background: var(--card);
       border-radius: 16px;
       padding: 2rem 1.5rem;
@@ -61,7 +62,7 @@
     /* Grid layout for 3 parallel cards */
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr; /* three equal columns */
+      grid-template-columns: repeat(3, 1fr); /* three equal columns */
       gap: 1rem;
       margin-top: 1rem;
     }
@@ -72,7 +73,6 @@
       border-radius: 12px;
       padding: 1rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: pointer;
       text-decoration: none; /* remove underline */
       color: inherit; /* keep text colour */
       display: block;
@@ -96,6 +96,18 @@
       border-radius: 8px;
       padding: 0.25rem 0.5rem;
       margin-top: 0.5rem;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 2rem; /* spacing below grid */
+      background: #111;
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.6rem 0.9rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
     }
 
     footer {
@@ -144,6 +156,9 @@
           <span class="tag">Healthy Choices</span>
         </a>
       </div>
+
+      <!-- Single Read More button below all cards -->
+      <a class="read-more" href="readmore.html">Read More →</a>
     </div>
   </section>
 
@@ -153,5 +168,3 @@
 
 </body>
 </html>
-
-
